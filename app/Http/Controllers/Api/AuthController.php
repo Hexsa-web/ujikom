@@ -3,71 +3,70 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    // REGISTER
     public function register(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6'
+            'name'                  => 'required|string|max:255',
+            'email'                 => 'required|string|email|max:255|unique:users',
+            'password'              => 'required|string|min:8|confirmed',
+            'password_confirmation' => 'required',
         ]);
 
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'name'      => $request->name,
+            'email'     => $request->email,
+            'password'  => Hash::make($request->password),
+            'is_admin'  => false,
         ]);
 
-        $token = $user->createToken('auth_token')->plainTextToken;
+        $token = $user->createToken('ujikom_token')->plainTextToken;
 
         return response()->json([
-            'status' => true,
-            'message' => 'Register berhasil',
-            'token' => $token,
-            'user' => $user
-        ]);
+            'success' => true,
+            'message' => 'Registrasi berhasil',
+            'user'    => $user,
+            'token'   => $token
+        ], 201);
     }
 
-    // LOGIN
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required',
-            'password' => 'required'
+            'email'    => 'required|email',
+            'password' => 'required',
         ]);
 
         $user = User::where('email', $request->email)->first();
 
         if (!$user || !Hash::check($request->password, $user->password)) {
-            return response()->json([
-                'status' => false,
-                'message' => 'Email atau password salah'
-            ], 401);
+            throw ValidationException::withMessages([
+                'email' => ['Email atau password salah.'],
+            ]);
         }
 
-        $token = $user->createToken('auth_token')->plainTextToken;
+        $token = $user->createToken('ujikom_token')->plainTextToken;
 
         return response()->json([
-            'status' => true,
+            'success' => true,
             'message' => 'Login berhasil',
-            'token' => $token,
-            'user' => $user
+            'user'    => $user,
+            'token'   => $token
         ]);
     }
 
-    // LOGOUT
     public function logout(Request $request)
     {
-        $request->user()->tokens()->delete();
+        $request->user()->currentAccessToken()->delete();
 
         return response()->json([
-            'status' => true,
+            'success' => true,
             'message' => 'Logout berhasil'
         ]);
     }

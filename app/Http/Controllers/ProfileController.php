@@ -12,9 +12,9 @@ class ProfileController extends Controller
         $user = Auth::user();
 
         $myReseps = $user->reseps()
-                         ->where('status', 'approved')   // Hanya yang sudah approved
-                         ->latest()
-                         ->paginate(6);
+                 ->with('kategori')           // tambahkan ini agar kategori ikut ter-load
+                 ->latest()
+                 ->paginate(6);
 
         $favorites = $user->favorites()
                           ->with('kategori')

@@ -468,6 +468,13 @@
                                     @else
                                         <div class="pf-card-img-placeholder">🍽️</div>
                                     @endif
+                                        @if($resep->status == 'approved')
+        <span class="pf-card-status ok">✓ Disetujui</span>
+    @elseif($resep->status == 'rejected')
+        <span class="pf-card-status no">✕ Ditolak</span>
+    @else
+        <span class="pf-card-status wait">⏳ Review</span>
+    @endif
                                     <span class="pf-card-status ok">♥ Favorit</span>
                                 </div>
                                 <div class="pf-card-body">
