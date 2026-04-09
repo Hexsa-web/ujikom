@@ -39,7 +39,7 @@
 				<div class="col-lg-6 p-0">
 					<div class="banner_left d-flex justify-content-center flex-column">
 						<h1>Yummy Book</h1>
-						<p>Yummy Book adalah aplikasi berbasis web yang berfungsi sebagai buku resep digital, 
+						<p>Yummy Book Adalah aplikasi berbasis web yang berfungsi sebagai buku resep digital, 
 							di mana pengguna dapat mencari, melihat, dan menyimpan resep makanan, 
 							sedangkan admin dapat mengelola data resep dan pengguna.
 						</p>
