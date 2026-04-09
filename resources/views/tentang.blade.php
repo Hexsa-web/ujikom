@@ -30,7 +30,7 @@
     <!--================ Galeri Area =================-->
 <section class="gallery_area section-padding"
     style="
-        background-image: url('{{ asset('storage/ASET/blakang3.jpg') }}');
+        background-image: url('{{ asset('storage/ASET/back3.jpg') }}');
         background-size: 100% auto;
         background-position: center;
         background-repeat: no-repeat;
