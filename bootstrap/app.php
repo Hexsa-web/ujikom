@@ -12,10 +12,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
 
-        // === REGISTER MIDDLEWARE ADMIN ===
         $middleware->alias([
             'admin' => \App\Http\Middleware\Admin::class,
-            // Tambahkan middleware lain di sini kalau ada nanti
         ]);
 
     })
