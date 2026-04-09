@@ -105,17 +105,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 /* ================= BACKEND (ADMIN) ================= */
 
-// Approve & Reject Resep
+// Approve & Reject Resep (route ini tetap di luar group karena tidak perlu prefix)
 Route::patch('/resep/{resep}/approve', [ResepController::class, 'approve'])
     ->name('backend.resep.approve');
 
 Route::patch('/resep/{resep}/reject', [ResepController::class, 'reject'])
     ->name('backend.resep.reject');
 
+// === BACKEND GROUP (PAKAI STRING 'admin') ===
 Route::group([
     'prefix' => 'backend',
     'as' => 'backend.',
-    'middleware' => ['auth', Admin::class],
+    'middleware' => ['auth', 'admin'],   // ← Pakai string 'admin' (bukan Admin::class)
 ], function () {
 
     // Dashboard
