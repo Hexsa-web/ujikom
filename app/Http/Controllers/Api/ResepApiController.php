@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Resep;
 use Illuminate\Http\Request;
+use App\Http\Resources\ResepResource;
 
 class ResepApiController extends Controller
 {
@@ -19,7 +20,7 @@ class ResepApiController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Daftar resep berhasil diambil',
-            'data'    => $reseps
+            'data'    => ResepResource::collection($reseps)
         ]);
     }
 
