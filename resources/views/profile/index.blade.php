@@ -424,7 +424,7 @@
                                     <div class="pf-card-title">{{ $resep->judul }}</div>
                                     <div class="pf-card-desc">{{ Str::limit(strip_tags($resep->deskripsi), 80) }}</div>
                                     <div class="pf-card-footer">
-                                        <a href="{{ route('front.resep.show', $resep->id) }}" class="pf-btn-view">
+                                        <a href="{{ route('resep.detail', $resep->id) }}" class="pf-btn-view">
                                             Lihat
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                         </a>
@@ -481,7 +481,7 @@
                                     <div class="pf-card-title">{{ $resep->judul }}</div>
                                     <div class="pf-card-desc">{{ Str::limit(strip_tags($resep->deskripsi), 80) }}</div>
                                     <div class="pf-card-footer">
-                                        <a href="{{ route('front.resep.show', $resep->id) }}" class="pf-btn-view">
+                                        <a href="{{ route('resep.detail', $resep->id) }}" class="pf-btn-view">
                                             Lihat Resep
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                         </a>
