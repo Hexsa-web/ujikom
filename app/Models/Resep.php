@@ -1,9 +1,11 @@
-    <?php
-
+<?php
+    
     namespace App\Models;
 
     use Illuminate\Database\Eloquent\Factories\HasFactory;
     use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Support\Facades\Storage;
+    use App\Models\User;
 
     class Resep extends Model
     {
@@ -59,15 +61,11 @@
         }
 
         public function getFotoUrlAttribute()
-{
-    if (!$this->foto) {
-        return null; // atau URL gambar default
-    }
-
-    // Kalau foto disimpan dengan Storage::disk('public')->put(...)
-    return asset('storage/' . $this->foto);
+        {
+            if (!$this->foto) {
+            return null; // atau URL gambar default
+        }
+            return url('storage/' . $this->foto);
+        }
     
-    // Atau kalau kamu pakai Storage::put('resep/', $file) tanpa 'public'
-    // return asset('storage/resep/' . $this->foto);
-}
     }

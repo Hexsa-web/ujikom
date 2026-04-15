@@ -2,71 +2,53 @@
 <footer class="footer-area p_120">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget tp_widgets">
-                    <h6 class="footer_title">Top Products</h6>
+                    <h6 class="footer_title">Yummy</h6>
                     <ul class="list">
-                        <li><a href="#">Managed Website</a></li>
-                        <li><a href="#">Manage Reputation</a></li>
-                        <li><a href="#">Power Tools</a></li>
-                        <li><a href="#">Marketing Service</a></li>
+                        <li><a href="#">PT YummyBook merupakan perusahaan teknologi kuliner asal Indonesia yang didirikan pada tahun 2025. Perusahaan ini menyediakan platform digital berisi berbagai resep masakan lengkap dan mudah diakses, serta fitur interaktif untuk membantu pengguna dalam memasak dan menemukan inspirasi kuliner.</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-footer-widget tp_widgets">
-                    <h6 class="footer_title">Quick Links</h6>
+                    <h6 class="footer_title">Tautan Langsung</h6>
                     <ul class="list">
-                        <li><a href="#">Jobs</a></li>
-                        <li><a href="#">Brand Assets</a></li>
-                        <li><a href="#">Investor Relations</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Kehidupan di YummyBook</a></li>
+                        <li><a href="#">Produk</a></li>
+                        <li><a href="#">Resep</a></li>
+                        <li><a href="#">Artikel</a></li>
+                        <li><a href="#">Kontak Kami</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-footer-widget tp_widgets">
-                    <h6 class="footer_title">Features</h6>
+                    <h6 class="footer_title">Produk Digital</h6>
                     <ul class="list">
-                        <li><a href="#">Jobs</a></li>
-                        <li><a href="#">Brand Assets</a></li>
-                        <li><a href="#">Investor Relations</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Resep Premium</a></li>
+                        <li><a href="#">Kelas Memasak</a></li>
+                        <li><a href="#">E-Book Masakan</a></li>
+                        <li><a href="#">Paket Menu Harian</a></li>
+                        <li><a href="#">Rekomendasi Bahan</a></li>
+                        <li><a href="#">Fitur Favorit & Koleksi</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-7 col-sm-7">
                 <div class="single-footer-widget tp_widgets">
-                    <h6 class="footer_title">Resources</h6>
+                    <h6 class="footer_title">Kontak</h6>
                     <ul class="list">
-                        <li><a href="#">Guides</a></li>
-                        <li><a href="#">Research</a></li>
-                        <li><a href="#">Experts</a></li>
-                        <li><a href="#">Agencies</a></li>
+                        <li><a href="#">Jl. Cisirung</a></li>
+                        <li><a href="#">Kab. Bandung 40353</a></li>
+                        <li><a href="#">Indonesia</a></li>
+                        <li><a href="#">+62 889 0162 8158</a></li>
                     </ul>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <aside class="f_widget news_widget">
-                    <div class="f_title">
-                        <h3 class="footer_title">Newsletter</h3>
-                    </div>
-                    <p>Stay updated with our latest trends</p>
-                    <div id="mc_embed_signup">
-                        <form class="subscribe_form relative">
-                            <div class="input-group d-flex flex-row">
-                                <input name="EMAIL" placeholder="Enter email address" required type="email">
-                                <button class="btn sub-btn">
-                                    <span class="lnr lnr-arrow-right"></span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </aside>
             </div>
         </div>
 
@@ -75,10 +57,14 @@
                 Copyright © {{ date('Y') }} All rights reserved
             </p>
             <div class="col-lg-4 col-md-4 footer-social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-dribbble"></i></a>
-                <a href="#"><i class="fa fa-behance"></i></a>
+                <a href="https://m.facebook.com"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/xseeee.e______/" target="_blank">
+    <i class="fa fa-instagram"></i>
+</a>
+                <a href="https://www.yummybook.dpdns.org/"><i class="fa fa-dribbble"></i></a>
+                <a href="https://wa.me/6288901628158" target="_blank">
+                    <i class="fa fa-whatsapp"></i>
+                </a>
             </div>
         </div>
     </div>

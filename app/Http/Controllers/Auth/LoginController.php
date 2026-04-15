@@ -33,7 +33,7 @@ class LoginController extends Controller
         }
 
         // Jika bukan admin → ke halaman home biasa
-        return '/home';
+        return '/';
     }
 
     /**

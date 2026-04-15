@@ -12,7 +12,7 @@ class ResepApiController extends Controller
     // List semua resep yang sudah approved (untuk public)
     public function index()
     {
-        $reseps = Resep::with('kategori')
+        $reseps = Resep::with(['kategori'])
                     ->approved()
                     ->latest()
                     ->paginate(12);
