@@ -177,7 +177,7 @@
             <div class="kf-info">
                 <div class="kf-info-icon">💡</div>
                 <div class="kf-info-text">
-                    Kategori membantu pengguna menemukan resep dengan lebih mudah. Gunakan nama yang jelas dan deskriptif seperti "Makanan Pembuka", "Dessert", atau "Masakan Indonesia".
+                    Kategori membantu pengguna menemukan resep dengan lebih mudah. Gunakan nama yang jelas dan deskriptif seperti "Mudah", "Sedang", atau "Sulit".
                 </div>
             </div>
 
@@ -191,7 +191,7 @@
                     <input type="text" 
                            name="nama" 
                            class="kf-input @error('nama') is-invalid @enderror" 
-                           placeholder="Contoh: Makanan Tradisional"
+                           placeholder="Contoh: Mudah, Sedang, Sulit"
                            value="{{ old('nama') }}"
                            required>
                     @error('nama')

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical" class="dark-layout">
 
 <head>
   <!-- Required meta tags -->
@@ -827,17 +827,19 @@
         <div class="offcanvas-body h-n80" data-simplebar>
           <h6 class="fw-semibold fs-4 mb-2">Theme</h6>
 
-          <div class="d-flex flex-row gap-3 customizer-box" role="group">
-            <input type="radio" class="btn-check light-layout" name="theme-layout" id="light-layout" autocomplete="off" />
-            <label class="btn p-9 btn-outline-primary rounded-2" for="light-layout">
-              <i class="icon ti ti-brightness-up fs-7 me-2"></i>Light
-            </label>
-
-            <input type="radio" class="btn-check dark-layout" name="theme-layout" id="dark-layout" autocomplete="off" />
-            <label class="btn p-9 btn-outline-primary rounded-2" for="dark-layout">
-              <i class="icon ti ti-moon fs-7 me-2"></i>Dark
-            </label>
-          </div>
+  <div class="d-flex flex-row gap-3 customizer-box" role="group">
+  <!-- Dark Theme - Default aktif -->
+  <input type="radio" class="btn-check dark-layout" name="theme-layout" id="dark-layout" autocomplete="off" checked />
+  <label class="btn p-9 btn-outline-primary rounded-2" for="dark-layout">
+    <i class="icon ti ti-moon fs-7 me-2"></i>Dark
+  </label>
+  
+  <!-- Light Theme -->
+  <input type="radio" class="btn-check light-layout" name="theme-layout" id="light-layout" autocomplete="off" />
+  <label class="btn p-9 btn-outline-primary rounded-2" for="light-layout">
+    <i class="icon ti ti-brightness-up fs-7 me-2"></i>Light
+  </label>
+</div>
 
           <h6 class="mt-5 fw-semibold fs-4 mb-2">Theme Direction</h6>
           <div class="d-flex flex-row gap-3 customizer-box" role="group">
@@ -1161,6 +1163,18 @@
   <!-- Menambah wadah js baru dan akan dipanggil ketika dibutuhkan  -->
    @yield('js')
    @stack('scripts')
+     <!-- Script agar tema Dark langsung aktif -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+      
+      // Pastikan radio button Dark tercentang
+      const darkRadio = document.getElementById("dark-layout");
+      if (darkRadio) {
+        darkRadio.checked = true;
+      }
+    });
+  </script>
 </body>
 
 </html>
